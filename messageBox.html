@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Standard Message Boxes</title>
+</head>
+<body>
+    <h1>This is a heading</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, distinctio nesciunt adipisci quisquam praesentium impedit magnam odio porro vero doloribus!</p>
+
+    <script>
+                //    internal javascript
+        // Alert--
+        // let Message = "Hey, Whats your age";
+        // alert(Message);
+
+        //Prompt
+        // prompt will ask you a value it will make it string.
+        // let a = prompt("hey whats your age?"); age will stored in a.
+        // alert('your age is ' + a);
+
+        // Confirm --> used to navigate.
+
+        let choice = confirm("want to go to google?");
+        // alert(choice);
+        if(choice == true){
+             location.href = "https://www.google.com";  //it will navigate to google.
+        }else{
+            alert("not navigating to google.")
+        }
+
+        // Console Object -->it consist many function like log, warn, error,table ,time ,clear etc
+        
+        console.log("hey this is console.")
+        console.warn("hey this is a warning syntax.")
+        console.error("hey I am error")
+        console.info("hey ia info");
+        // console.clear();
+         
+        // this ia function to set time to run once.
+        // setTimeout(function (){
+        //    //call
+        //    console.log("clearing");
+        //    // clear function will run after 3 second.
+        //    console.clear();
+        // },3000)
+
+        // table function.
+         let student = {
+            name : "fraju",
+            address: "kanpur",
+            phone: "1234567892",
+         }
+         console.log(student);
+         console.log(student.name);
+         console.table(student)
+
+    </script>
+</body>
+</html>
