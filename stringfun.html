@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String usefull function</title>
+</head>
+<body>
+    <h1>String important function</h1>
+
+    <script>
+
+        // String Function.
+        let s = "I Love JS Data"
+        console.log(s);
+
+        // function
+        //1. lenth-number of character.
+        // length is property not a function. 
+        let len = s.length;
+        console.log("length", len);
+        // function
+        // 2. concatinate concat().
+        let s1 = "and C++"
+        // console.log(s + " " + s1);
+        // using function.
+        let ans = s.concat(" ", s1);
+        console.log(ans);
+
+        // 3.charAt(index)-- this will return the character of given index.
+        let c = s.charAt(7);
+        console.log(c);
+
+        //4. indexOf()--- this will give us index of given character.
+        // this will check the index from starting.
+        let d = s.indexOf("a");
+        console.log(d);
+
+        //5. LastindexOf --> this will work same as indexof but it will check from end of character.
+        let index1 = s.lastIndexOf('a')
+        console.log(index1);
+
+        // toUpperCase.
+        console.log(s.toUpperCase());
+
+        // toLowerCase.
+
+        console.log(s1.toLowerCase());
+        console.log(s.toLowerCase());
+
+        // 7. substring(start,end)
+        let st = s.substring(2,6); // end is not included.
+         st = s.substring(2);
+        console.log(st);
+
+        //8. startwith()
+        console.log(s.startsWith("I"));
+
+        // 9. endwith()
+        console.log(s.endsWith("Data"));
+
+        //10. split function
+        let sp = s.split(" "); // breaking string when we get space.
+        console.log(typeof sp);
+        console.log(sp);
+        console.log(sp[0]);
+        console.log(sp[1]);
+        console.log(sp[2]);
+        console.log(sp[3]);
+
+        //11. trim() --. this will remove the front and back spces from string.
+        let s2 = "          my content";
+        let s3 = s2.trim(""); // it will remove the spcae from content.
+        console.log(s3);
+    </script>
+</body>
+</html>
