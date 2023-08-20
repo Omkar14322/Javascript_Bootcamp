@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>type casting</title>
+</head>
+<body>
+    <h1>Type Conversion/ Casting</h1>
+    <script>
+//         type conversion / casting 
+// is two types--> 1) implicit(automatic)--> we have some func which do conversion automatic..like alert() ,2) explicit(manual).
+
+/* 1) string conversion.
+2)numeric conversion.
+2)boolean conversion.*/
+
+// string conversion
+
+let a = 23;
+console.log(typeof a);
+
+// to covert we have simply string function.
+let as = String(a);
+console.log(as);
+console.log(typeof as);
+
+console.log(as.length);
+
+//toString can aslso be used. to convert.
+console.log(a.toString());
+// console.log(typeof a);
+ console.log(String(false));
+
+ // Number Conversion.
+//  conversion func Number()
+
+let value = "1234";
+console.log(value+4); // --> four will be concatinate not perform mathmatics operation.
+
+let value1 = Number(value);
+console.log(value1 + 5);
+console.log(typeof value1);
+
+let f1 = "12377.54";
+
+// let f1 = 12377.54;
+console.log(typeof f1);
+let f2 = Number(f1);
+console.log(f2);
+console.log(typeof f2);
+
+// another method parseInt()
+//parseFloat()
+
+let pin = parseInt(value);
+console.log(pin);
+console.log(typeof pin);
+
+console.log(parseFloat(f1));
+
+//converting these gives following.
+/* undefined =>NaN
+null => 0
+true => 1
+false => 0 */
+
+console.log(Number(false));
+console.log(Number(undefined));
+
+// Boolean conversion.
+
+let ex = "false"; // this return true.
+//  let ex = ""; this will give false.
+console.log(typeof ex);
+// if the string is more than one charcter then it will give true.
+let b = Boolean(ex)
+console.log(b);
+console.log(typeof b);
+
+
+    </script>
+</body>
+</html>

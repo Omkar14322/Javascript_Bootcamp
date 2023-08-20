@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Five Important string Operations</title>
+</head>
+<body>
+    <h1>5 Important String Operation.</h1>
+
+    <script>
+        //  How to check equality of two string. 
+        // ==, ===
+      // == it ckecks in case sensitive manner.
+        let str1= "javascript";
+        let str2="jAvascript ";
+        console.log(str1==str2);
+        if(str1 == str2){
+            console.log("both string are equal");
+        }
+
+        else{
+            console.log("both string our not equal");
+        }
+
+        // creating string in another way
+        let str3 = new String("javascript");
+        let str4 = new String("javascript");
+        console.log(str3 == str4) //this will return false it does not check value ,insted of it checks refrences.  
+
+        //2. comparing string.
+
+        // let s1 = "A";
+        let s1 = "C";
+        let s2 = "B";
+        //localeCompare()-->function
+        let result = s1.localeCompare(s2); //s1 will be compare with s2.
+        //exact matching; output will be 0
+        //s1<s2 :-1 -->ASCII Value.-->s1=65,s2=66
+        //s1>s2; +1
+        console.log(result);
+
+        // if you want to know the char code.....
+        // character code of b is 66
+        console.log(s2.charCodeAt(0));
+
+        //3. replace certain word with another.
+        // replace() --> we use to replace 
+        // if you will not pass the value in func. then it will replace the first occurence in string and it case sensitive also.
+        let oldString= "I hate Javascript";
+        let newString = oldString.replace("hate","Love");
+        // replace fuction give new string after changing.
+        console.log(newString)
+
+        //4. Accessing character --string
+        //charAt(index) function. if charAt do not get char then it will print blank spce.
+        console.log(oldString[76]); // but this print undefined.
+        console.log(oldString.charAt(0));
+        console.log(oldString.charAt(5));
+
+        // converting string to array.--> using split function
+        let as = newString.split(" ");
+        console.log(as);
+
+        // we get every charachter as array..by passing blank value..
+        let ch = oldString.split("")
+        console.log(ch);
+
+        
+    </script>
+</body>
+</html>
