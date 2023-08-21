@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    
+    <h1> Javascript Arrays</h1>
+
+    <script>
+
+        // array type is not fixed.
+        // let arr = [ 3, 4, "d" , 8, "j"]; This is valid.
+
+        // size is not fixed.
+        // let arr = [12,23,8]
+        // we can add element in arr by push....
+
+        // how to create array.
+        //1.
+        let arr = [12, 6, 8, 9,90];
+        console.log(arr);
+        console.log(typeof arr);
+
+        // Access the element. --> syntax log(arr[index/position]);
+        console.log(arr[3]);
+        console.log(arr[0]);
+        console.log(arr[8]); // this prints undefined.
+
+        // using constructor to create array.
+
+        let names = new Array("omfoo", "rakesh", "Hari", "shivam");
+        console.log(names);
+
+        console.log(names[1]);
+        
+        //Adding the element in array (names) .
+        names.push("kiran");
+        console.log(names);
+       
+        console.log(names[4]);
+
+        names.push("vandana");
+        console.log(names);
+        
+        //how to find size of array.
+        console.log("size of array names is", names.length);
+
+        // type is not fixed.
+        const mydetails = ["HariOm", 98765, 80.8, ["ABC", "XYZ"]];
+        console.log(mydetails);
+        console.log(mydetails[0]);
+        console.log(mydetails[3]);
+        console.log(mydetails[3][0]);
+        console.log(mydetails[3][1]);
+
+
+
+    </script>
+</body>
+</html>

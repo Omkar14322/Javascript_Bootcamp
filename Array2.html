@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Common Operation</title>
+</head>
+<body>
+    <h1>Javascript Common Array Operation</h1>
+
+    <script>
+        //array operation.
+        //create.
+        let names = ["john", "shivam", "Hari"];
+        console.log(names);
+        console.log(names.length);
+
+    // loop over an array.
+    //forEach.
+    names.forEach(function (items, index) {
+        console.log(items," --> ", index);
+    }); 
+
+    let nums = [22, 11, 99, 33];
+    let sum = 0;
+    nums.forEach(function(items, index) {
+        sum = sum + items;
+    });
+
+    console.log("Sum is", sum);
+
+    console.log(names);
+    //Adding the element in End.
+
+    names.push("shyam");
+    console.log(names);
+
+    names.push("Ravan");
+    console.log(names);
+
+    // Deleting the element.
+    //pop element from end.
+    let r = names.pop();
+    console.log(r);
+    console.log(names);
+    console.log(names.pop());
+    console.log(names);
+
+    // remove from begning.-->shift()
+    let r1 = names.shift(); // remove first element.
+    console.log(names);
+    console.log(r1);
+
+    // add element in begning.
+    let r2 = names.unshift("Vinod")
+    console.log(names);
+    console.log(r2);
+
+    let pos = names.indexOf("shivam");
+    console.log(pos);
+
+    // remove the element from any position using splice().
+    //splice(pos,n) n--> no. of element to be removed.
+    console.log(names.splice(1,2));
+    console.log(names);
+
+    // copy an array.
+    //slice()
+
+    let copy = names.slice();
+    console.log(copy);
+    console.log(names);
+
+    console.log(names.length);
+
+    let st = "hello this is a best repository to learn javascript";
+    console.log(st);
+    console.log(st.length);
+    </script>
+</body>
+</html>
