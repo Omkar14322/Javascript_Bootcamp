@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+
+<body>
+    <h1>Function /Arrow Function</h1>
+
+    <script>
+        //Function.
+        // how to create a function.
+        function sayHello() {
+            console.log("hello ,");
+            console.log("How are you? ,");
+            console.log("What are you doing ,");
+        }
+
+        // calling function 
+        sayHello();
+
+        console.log("Function seek rahe ho na mere sath?");
+
+        // function with parameter and return value.
+        // Formal parameter
+        function doSum(a, b) {
+            let c = a + b;
+            return c;
+        }
+
+        // Actual parameters(5,8).
+        let s = doSum(5, 8);
+        //  doSum(5,8);
+        console.log("sum is ", s);
+
+        //why?
+        //code can be used.
+
+        //Arrow Functon.
+        //celsius to farenheit.
+        const tocelsius = (fahrenheit) => {
+            let result = (5 / 9) * (fahrenheit - 32);
+            return result;
+        }
+
+        let c = tocelsius(102);
+        console.log(c);
+
+
+
+
+    </script>
+</body>
+
+</html>
