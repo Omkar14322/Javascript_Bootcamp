@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While Loops</title>
+</head>
+
+<body>
+    <h1>While Loops And do While loops</h1>
+    <script>
+        //while loops.:- Repeat the statement code as long the specified condition evaluates to true.
+        //while(){Body}
+        let i = 1;
+        let b = true; 
+        while (b) {
+            console.log(`value of i is ${i} `);
+            i++;
+            if(i == 11){
+                b = false;
+            }
+            console.log(b);
+        }
+
+        // do while loops....
+        // Repeat the statements code as long as the specified condition evaluates to true.
+        //do{}while(condition).
+        // let a = 2;
+        // do{
+        //     console.log(`value of a ${a}`);
+        //     a++;
+        // }while(a <= 6);
+
+         let a = 2;
+        do{
+            console.log(`value of a ${a}`);
+            a++;
+        }while(false); // this will print atleast once if condition is false.
+
+
+    </script>
+</body>
+
+</html>
