@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+
+<body>
+    <h1>Objects Operation.</h1>
+    <script>
+        // objects is just a collection of key value pair.
+        //objects can also have function inside.
+        //creating Objects.
+        let ob = {
+            name: "Mohan",
+            age: 20,
+            address: "Delhi",
+            phone: 9859,
+            last_name: "Tiwari",
+            // "last name": "Tiwari"
+
+            display: function () {
+                console.log("going to display properties");
+                console.log(this.name);
+                console.log(this.age);
+                console.log(this.address);
+            }
+        };
+
+        console.log(ob);
+        console.log(typeof ob);
+
+        //accessing the properties of object.
+        console.log(ob.name);
+        console.log(ob.address);
+        console.log(ob.last_name);
+
+        console.log(ob["name"]);
+        console.log(ob["phone"]);
+        // console.log(ob["last name"]); --> if you have written this in string then only you can access it .
+        //calling function of object.
+        ob.display()
+        ob["display"]();
+
+        for(let key in ob){
+            console.log(key + " " + ob[key]);
+        }
+
+        //changing values of property.
+        ob.name = "vibhuti"
+        ob.last_name = "Narayan Mishra"
+        console.log(ob.last_name);
+        console.log(ob.name);
+        console.log(ob);
+
+        //dynamic adding properties.
+        ob["email"] = "learn@codewithme";
+        console.log(ob);
+
+        //deleting properties dynamic.
+
+        delete ob.last_name;
+        delete ob.phone;
+        console.log(ob);
+    </script>
+</body>
+
+</html>
