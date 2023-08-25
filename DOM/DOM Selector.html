@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Selector</title>
+</head>
+
+<body>
+    <h1>DOM Selector</h1>
+    <h2 id="banner">Lets Learn With Me</h2>
+    <h3 class="cl"> hello World</h3>
+    <h3 class="cl">hello Duniyaa</h3>
+    <h3 class="cl">hello Logo</h3>
+<!-- Selecting by Tagname -->
+    <div id="myDIV">
+        <p>I am a paragraph.</p>
+        <p>I am a paragraph.</p>
+        <p>I am a paragraph.</p>
+    </div>
+
+    <p>The number of p elements in "myDIV" is:</p>
+    <p id="demo"></p>
+
+    <script>
+        console.log("DOM Selectors");
+        // targeting whole html doc.
+        let ht = document.documentElement;
+        console.log(ht);
+        // select body.
+        //if you try to access the body section in head it will return -->NULL
+        let bd = document.body;
+        console.log(bd);
+        //targeting head
+        let hd = document.head;
+        console.log(hd);
+
+
+        // access element by id using function getElementByid()--return single Object. 
+        let h2 = document.getElementById("banner");
+        //   console.log(h2);
+        //changing it value.using innerhtmltext
+        h2.innerHTML = "Change Text";
+
+        //changing color.
+        h2.style.color = "red";
+        h2.style.backgroundColor = "blue";
+
+        // Selecting elements by className.
+        //getElementsbyclassname()
+        let ul = document.getElementsByClassName("cl");
+        console.log(ul);
+        console.log(typeof ul);
+        // for(let element of ul){
+        //     console.log(element);
+        //     element.style.color = "blue";
+        //     element.style.backgroundColor="red";
+        // }
+
+        //get elements by Tagname.
+
+
+        const element = document.getElementById("myDIV");
+        const nodes = element.getElementsByTagName("p"); // we have 3 p tag node length is 3.
+        document.getElementById("demo").innerHTML = nodes.length;
+
+        //Selecting Element with the help of CSS Selector.
+        //querySelector - single element.
+        //querySelectorAll - list of element(objects).
+        //syntax for Selector(".cl");
+        let li = document.querySelector(".cl");
+        let lis = document.querySelectorAll(".cl");
+        // console.log(li);
+        // console.log(lis);
+
+        for (let e of lis) {
+            console.log(e);
+            e.style.color = "green";
+            e.style.backgroundColor = "pink";
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>
