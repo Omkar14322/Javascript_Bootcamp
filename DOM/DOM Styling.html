@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Styling</title>
+    <style>
+    .blue{
+        background-color: blue;
+        color: yellow;
+    }
+</style>
+</head>
+
+<body>
+    <h2 id="main">Learn With Us</h2>
+    <!-- when we click on button it will call the changeStyle() function. -->
+    <button onclick="changeStyle()">change Style</button>
+
+    <button onclick="getStyle()">Get Information</button>
+
+
+    <h2 id="sub">From My Github </h2>
+    <h2 id="subs">For programming javascript</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus aperiam voluptatem quisquam maxime, eius
+        facilis eos quaerat autem, asperiores quia quas magnam dolor reiciendis aut blanditiis itaque! Facere, assumenda
+        placeat!</p>
+
+    <script>
+        //Select the Element.
+        let mainOb = document.getElementById("main");
+
+        //applying style on element.
+
+
+        //name of object.style.property to change color.
+        //if we write style property in javascript then it will be a camel case which means first letter will be small and other will be Capital e.g fontSize.
+
+        /* mainOb.style.color = "white";
+        mainOb.style.fontSize = "50px";
+        mainOb.style.fontWeight = "italic";
+        mainOb.style.border = "2px solid green";
+        mainOb.style.padding = "35px";
+        mainOb.style.background = "black"; */
+
+        // mainOb.style.backgroundImage = "img";
+
+        // Changing style of attribute dynamically.
+        const changeStyle = () => {
+            mainOb.style.color = "white";
+            mainOb.style.fontSize = "50px";
+            mainOb.style.fontWeight = "italic";
+            mainOb.style.border = "2px solid green";
+            mainOb.style.padding = "35px";
+            // mainOb.style.background = "black";
+            //document.body.style.background to change the background color of body.
+            document.body.style.background = "black";
+            document.body.style.color = "white";
+           
+            // appending class 
+            mainOb.className = mainOb.className + "blue";
+        };
+
+        // getting information the style of mainOb object.
+        const getStyle = () => {
+            // console.log(mainOb.style.color);
+            // console.log(mainOb.style.fontSize);
+            // console.log(mainOb.style.border);
+            
+            // every style of mainOb is stored under stylesand we get all the styles property from window.getComputedStyle(name of object)
+            let styles = window.getComputedStyle(mainOb)
+            
+            // styel we get it is already set .
+            console.log(styles.getPropertyValue("color"));
+            console.log(styles.getPropertyValue("fontSize"));
+        };
+        
+       
+
+
+
+
+    </script>
+</body>
+
+</html>
