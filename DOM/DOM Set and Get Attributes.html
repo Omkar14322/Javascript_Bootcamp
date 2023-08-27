@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript DOM Set and Get Attributes</title>
+</head>
+<body>
+    <h1>DOM Set and Get</h1>
+    <a id="url" class="alert alert-danger" href="https://www.google.com">Google</a>
+
+    <button onclick="getAtt()">Get</button>
+    <button onclick="setAtt()">Set</button>
+    <script>
+        //How to get the attributes.
+        // value = getAttribute(attribute) --> this will give value as return.
+        //How to Set attribute.
+        // SetAttribute('attr',value)
+        const getAtt = ()=>{
+            //get the attribute.
+            let urlOb = document.getElementById("url");
+            let h = urlOb.getAttribute("href");
+            console.log(h)
+            console.log(urlOb.getAttribute('id'));
+            console.log(urlOb.getAttribute('class'));
+
+        };
+        const setAtt = ()=>{
+            //set the attribute.
+            let urlOb = document.getElementById("url");
+            //we set the value yahoo.com insted of google.com
+             urlOb.setAttribute("href", "https://www.yahoo.com");
+        //    console.log(s);
+
+        };
+
+    </script>
+</body>
+</html>
