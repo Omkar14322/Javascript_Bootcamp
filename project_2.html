@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: black;
+            color: white;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .Clock {
+            font-size: 170px;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="Clock">11:00 PM</h1>
+    </div>
+
+    <script>
+        //getTime() is a function -->we can access time and date with new date() function.
+        const getTime = ()=>{
+             let d = new Date();
+            //  console.log(d);
+
+            let h = d.getHours();
+             // uses conditional syntax
+            let amPm =  h >=12 ? "PM" : "AM";
+             
+            // hour is zero then it will be 12 o clock.
+            h = h % 12;
+            // if h == 0 then it will be 12 clock else : sotherwise hour this print after 12 --> 1 .
+            h = h == 0 ? 12 : h;
+
+            let m = d.getMinutes();
+            // if you want a minute in 2 digit then use.
+            // if m is greater than 9 the it will be in m else append 0 in minute 09;
+            m = m > 9 ? m : "0" + m;
+
+            let s = d.getSeconds();
+            //if s is greater than 9 it will be in s else: append "0" in seconds.
+            s = s > 9 ? s : "0" + s;
+
+            return `${h} : ${m} :${s}  ${amPm}`;
+
+
+            //  shortcut method with function object.toLocaleTimeString();
+            
+            // we also have one shortcut method to do all this in one short,
+            //  return d.toLocaleTimeString();
+        };
+
+        setInterval(()=>{
+            // console.log(getTime());
+
+           let clOb = document.querySelector(".Clock");
+           clOb.innerHTML = getTime();
+        }, 1000);
+    </script>
+</body>
+
+</html>
