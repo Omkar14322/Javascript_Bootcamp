@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+
+<body>
+
+    <div id="main">
+
+        <!-- insert before will print here. -->
+        <h1 id="title">Hello World</h1>
+        <p id="hint">This is a simple paragraph</p>
+
+        <!-- append child will add here. -->
+    </div>
+
+    <button onclick="addNode()">Add Node</button>
+
+    <script>
+        //adding node function.
+        function addNode() {
+            // creating node dynamically using createElement function.
+            //this will create the object of div element.
+            let divE = document.createElement("div");
+
+            //writing text in div tag.
+            //creating text node using TextNode function.
+            let Text = document.createTextNode("We are Working Dynamically.");
+            let TextN = document.createTextNode("We will append this text in divE which we have created.");
+
+            //adding textnode to divE.
+            divE.appendChild(Text);
+            divE.appendChild(TextN);
+            console.log(divE);
+
+            //adding divE text in body took the reference of id main then we append the text of divE.
+            let mainE = document.getElementById("main");
+            // mainE.appendChild(divE);  --> one element will work at time.
+
+            // insert text before the title in div by taking the reference of title by accessing it with document.getElementid().
+            let titleE = document.getElementById("title");
+            //insertbefore function insert divE content before title.
+            mainE.insertBefore(divE,titleE); //one Element will work at a time.
+            mainE.appendChild(divE);
+
+
+           //changing title  element.
+            titleE.innerHTML = "Hey world";
+
+            //we can also use insertadjacent() to insertbefore or append element ,after if we do not want to change. 
+
+            
+            // if you want to remove any element remove it by fuction removechile()
+            //this will remove titleE content when addNode function will run.
+            mainE.removeChild(titleE);
+
+        }
+
+    </script>
+</body>
+
+</html>

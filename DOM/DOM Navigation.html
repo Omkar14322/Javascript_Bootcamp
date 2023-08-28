@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Navigation</title>
+</head>
+
+<body>
+
+    <h1>Navigating to parent to Child and other Nodes easily</h1>
+    <div id="heading">
+        <h1 id="title">We are learning javascript</h1>
+        <p id="content">
+            <span>
+                javascript is one of the most popular programming language for front end as well as backend.
+            </span>
+        </p>
+
+        <h2>Keep Going</h2>
+    </div>
+  
+    <button onclick="btnClick()">Click here</button>
+    <script>
+        //keeping all this in function and making button.
+        function btnClick() {
+            //  traversing
+            let headOb = document.getElementById("heading");
+
+            // console.log(headOb);
+            //object firstChild print name of node using nodeName.
+            //firstChild means it will space and line change is known as text to remove this we will access firstChildElement.
+            console.log(headOb.firstChild.nodeName);
+
+            //This will return tag.
+            console.log(headOb.firstElementChild.nodeName);
+
+            //This willl return Tag + content.
+            let firstChild = headOb.firstElementChild;
+            // console.log(firstChild);
+
+            //This will change the content of h1 with innerHTML.
+            firstChild.innerHTML = "Hi, Going to change future";
+
+            // access last child
+            let last = headOb.lastElementChild;
+            last.style.background = "red";
+            last.style.color = "black";
+
+            // if you want to access all the nodes.
+            let nodes = headOb.childNodes;
+            // let nodes = headOb.children; --> this will return all nodes/child tag.
+            //array can be access by for of loops.
+            for(let n of nodes){
+                //This will print all the nodeName.
+                console.log(n.nodeName);
+            }
+
+            //-----accessing ParentNode-- this will return parentTag----
+            let parent = headOb.parentNode;
+            console.log(parent.nodeName);
+
+            //Accesseing siblings.
+            //previousSibling and nextSibling property to access.
+            let titleOb = document.getElementById("title");
+            // let nextS = titleOb.nextSibling;--> This willl return text.
+            let nextS = titleOb.nextElementSibling; // this will return tag name only not text.
+            console.log(nextS.nodeName);// This will print Tag p.
+            console.log(nextS.nextElementSibling.nodeName); // this will print h2 Tag 
+
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>
