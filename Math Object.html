@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Objects</title>
+</head>
+<body>
+    <h1>Math Objects Operation</h1>
+
+    <script>
+
+        // Math Related Operation
+        //Math
+
+
+        //Area of Circle.
+
+        function area_of_circle(r){ // you have to provide radius.
+            console.log(Math.PI);
+             let area = Math.PI*r*r; //Math.Pow(r, 2(multiply r 2 times.))
+            return area;
+
+        }
+
+        console.log(`Area of circle with radius 5 is ${area_of_circle(5)}`);
+
+        let a = -123;
+
+        console.log(Math.abs(a)); //this function will give absolute value mans positive value 123
+
+        //generating random number.
+
+        let ran = Math.random();
+        let Three_digit_num = ran *1000;
+        console.log(Three_digit_num);
+        console.log(ran);
+        //generating two digit number by multiplying ran with 100. In the same way we can generate 3 digit number, and so on.
+        console.log(ran * 100);
+
+        // remove number after decimal using Math.trunc() function.
+             console.log(Math.trunc(Three_digit_num));
+
+
+             //square root.
+
+             console.log(Math.sqrt(4));
+
+            //ceil--> this will do round off to always highest number 3.5 tp 4.
+            
+            console.log(Math.ceil(3.2));
+            console.log(Math.ceil(-3.2)); //round of will be -3
+
+            //floor --> this will do round of to minimum value.
+
+            console.log(Math.floor(4.5));
+            console.log(Math.floor(-4.5));//This print -5 which is minimum.
+           
+
+            //min and max
+            console.log(Math.min(78,23,89,76,9));
+            console.log(Math.max(78,23,89,76,9));
+
+            //trignometric values.
+            // sin,cos,tan all works when you convert it into radian.
+
+            console.log(Math.round (Math.sin(60*(Math.PI/180))));// do not Access 30 degree directly for getting value convert it into radian (60*pi/180). 
+            
+            //This will print all math object.
+            console.log(Math);
+   </script>
+</body>
+</html>
