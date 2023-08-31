@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events and Event Handling</title>
+</head>
+<body>
+    
+    <form onsubmit="form_submit(event)" action="test.html"> 
+        <!-- when you submitt the form it will move to test.html -->
+        <button type="submit">Submit</button>
+    </form>
+
+    <br>
+    <button onclick="alert('this is Click event')">Click Me</button>
+    <button onclick="my_func()">Click Me</button>
+
+     <input type="text" onfocus="change_color()" onkeyup="update_text()" placeholder="Enter here" id="focus"> <!--onfocus handler will focus on input tag. -->
+   <!-- onkeyup event onkeyup” : event is a keyboard event that occurs when the user leaves the keyboard key which was earlier pressed by the user.  -->
+
+     <h1 id="heading">This is dummy text</h1>
+   
+   <script>
+
+    const form_submit = (e) =>{
+        console.log(e); //this will print SubmitEvent. bec  a submitevent is called.
+        e.preventDefault(); //this will not let to go to test.html page.
+           
+    };
+        const my_func = () =>{
+            alert("this is alert from function");
+        };
+
+        const change_color = () =>{
+            document.getElementById("focus").style.backgroundColor="grey";
+        };
+
+        const update_text = () =>{
+            let data = document.getElementById("focus").value;  //value of input text will stored in data.
+            document.getElementById("heading").innerHTML = data; //whatever the value you will write in text shown as text of h1 .
+        };
+
+
+    </script>
+</body>
+</html>
