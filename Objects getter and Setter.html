@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects Getter And Setter</title>
+</head>
+<body>
+    
+    <h1>Object Constructor</h1>
+
+
+    <script>
+        //creating object of student
+        let student1={
+            name:"HariOm",
+            clg:"IIT Kanpur",
+            city:"kanpur",
+            phone:87651234,
+
+
+            // similarly we can get element using get function.
+            get getName(){
+                  return this.name.toUpperCase(); //upercase() show a result in capital
+            },
+
+            get getclg(){
+                return this.clg;
+            },
+
+
+
+            //we are setting the element using the setter function.
+            set setName(name){
+                //takin arg as name to set.(name)--> this is the local variable for this function only.
+                //we are try to set name of object.
+                
+                 console.log("setting value to object");
+                // if(name == ""){
+                //     alert("not going to set");
+                // }
+                 this.name = name;
+            },
+            // " , inserting comma for separation."
+            // similarly we can set other property also.
+
+            set setClg(clg){
+                console.log("setting the value to object");
+                   this.clg = clg;
+            },
+
+
+
+            //we maked here method display:function()
+            // if we want to access the property from method so we have to access it with this.
+            display:function() {
+                //ehaan pe ham ey batayenge ki jo ey name,clg,city,phone ey saree issi object ka hai student1 ka so for this we use this.
+                //if ti does not able to take the reference so we use this.
+                 return `${this.name} : ${this.clg} : ${this.city} : ${this.phone}`;
+            }
+        };
+
+        console.log(student1.display());
+
+        
+        //going to change or set the name.
+        
+        student1.setName ="";
+        student1.setClg = "IIT Madras";
+        // for display
+        console.log(student1.display());
+
+        //get the property ; getter
+           console.log(student1.getName);
+           console.log(student1.getclg);
+
+           //performing Constructor.
+           //First we will create Blueprint.
+
+       //here we will create object with help of person
+       //we use this in constructor to set value .
+       //we have multiple Constructor.
+        // new String()
+        // new Number()
+           function Person(id, phone,age){
+            this.personId=id;
+            this.personPhone = phone;
+            this.personAge = age;
+
+            this.display = function(){
+                return ( this.personAge + " : " + this.personPhone + " : " + this.personId );
+            };
+           };
+
+           //creating constructor.
+           //Now here we can make many objects as much as we want.
+
+           let p1 = new Person(123456, 98765432, 45);
+           console.log(p1.display());
+
+           let p2 = new Person(76455, 94567893,24);
+           console.log(p2.display());
+
+    </script>
+</body>
+</html>
