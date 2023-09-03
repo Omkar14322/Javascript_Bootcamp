@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Object learning </title>
+</head>
+<body>
+    <h2>Class and Object in JS</h2>
+
+    <script>
+        //javascript.
+        class Student{
+            //body of class
+             //constructor mendotory for initialize the object.
+            constructor(name, phone)
+            {
+                // /this is constructor body 
+                this.name = name;
+                this.phone = phone; //this.phone ey object varrriable hai jo object ke ander gaya hoga.
+                console.log("Object created");
+            }
+
+            ///creating method.
+            showDetails(){
+                console.log("Name :", this.name);
+                console.log("Phone :", this.phone);
+                console.log("========================");
+            }
+
+            getName(){
+                return  this.name.toUpperCase();
+            }
+        }
+
+        //going to creat object.
+
+        let s1 = new Student("Vikram", "987654342");
+
+        s1.showDetails();
+
+        //printing student name in capital.
+
+        console.log(s1.getName());
+
+
+        let s2 = new Student("Uttam", "45678932");
+        s2.showDetails();
+        console.log(s2.getName());
+
+
+    </script>
+</body>
+</html>
