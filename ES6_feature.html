@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 New Feature</title>
+</head>
+<body>
+    <h1>This is a ES6-2015 New Feature</h1>
+
+
+    <script>
+
+        //Arrow function 
+
+        //arg => Expression.
+        //(arg1, arg2) => expression.
+
+        // (arg) => {
+            //  return test;
+        // }
+
+        function square (x){
+            return x*x;
+        };
+
+        const squareA = (x)=>{
+            return x*x;
+        }
+        console.log(square(3));
+        console.log(squareA(5));
+
+        let a=[3245,1234,56];
+        //traversing array used for loop and arrow function.
+        a.forEach(e=> console.log(e))
+
+
+        // Multi line String.
+
+        let str=""
+        let str1=''
+
+        // for multiline we can use backteek(`)
+
+        let addresss = ` Ai is one of the most 
+        trending technology
+        in todays
+        area.
+        `
+
+        let dynamicHtml=` 
+        <form>
+            <input type='text' name='name'>
+            <button>OK</button>
+        </form>
+        `
+        
+        console.log(dynamicHtml);
+
+        //Default parameters
+
+        const sum = (x,y) => x + y;
+        //defoult parameter it have is NaN.
+        const sum1 = (x=1,y=3) => x + y;
+        let s = sum1() 
+
+        console.log(s)
+        console.log(sum(45, 25));
+
+        //5. Template Literals
+        let x =12;
+        let y=13;
+
+        let str2 = `value of ${x} and value of y ${y}`;
+        console.log(str2);
+        console.log(`sum of ${x} and ${y} is ${x+y}`);
+
+        // 6 DeStructuring Assigment.
+
+        let myarr=[22,55];
+
+        let [z,v] =myarr;
+        console.log(z);
+        console.log(v);
+
+        //DEstructing  object Assignment
+
+        let ob={
+            name:'js',
+            dbname:'mongoDB',
+        };
+
+        let{name,dbname}=ob;
+        console.log(name);
+        console.log(dbname);
+
+
+        let myarr1=[22,55,56,87,9,4,3455];
+        let [k,o,...rest] = myarr1;
+        console.log(k);
+        console.log(o);
+        console.log(rest);
+
+
+    </script>
+</body>
+</html>
