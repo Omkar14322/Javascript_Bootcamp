@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises and other Feature</title>
+</head>
+<body>
+    <h1>Promises and other feature of javascript</h1>
+
+    <script>
+       
+       //7. Enhanced Object literals.
+        
+       let a = 7; //7 is int literals.
+
+       //this is enhanced method.
+       let name ="ram" , City =" Lucknow";
+       let active = "john";
+
+       let studt = {
+        name,    //name=ram
+        City,    //city=lucknow
+        [active]:true, //this is to insert the Key dynamicaaly in object.
+        display:function(){
+            console.log(this.name);
+            console.log(this.City);
+
+        }
+       }
+       console.log(studt);
+       studt.display()
+
+       function createobject(a, b, c){
+        return {a, b, c}
+       }
+
+       let obj1 = createobject(34, 65, 66);
+       console.log(obj1); //this will print a: 34, b:65,c:66
+
+
+
+
+
+    //    //This is normal way to create a object.
+    //    let studt = {
+    //        name:"vikas",
+    //      city:"lucknow",
+    //      display:function(){
+    //         console.log(this.name+""+this.city);
+    //      }
+    //    };
+
+    //    console.log(studt);
+
+
+    //8.Promises in js--> it is used with asynchronous operation.
+    //  promise is an object. it can be rejct. it takes two parameters (resolve and reject)
+
+    //making promise func.
+
+    let prom= new Promise((resolve,reject)=>{
+        //Server call= asynchronous work.
+        //it will take time to execute async work.
+         //Kam Karoge(time)
+
+         //flag variable denotes the work is completed or not .
+         //true means completed.
+         //false means incompleted.
+        let flag = true;
+        // let flag = false;
+        
+       
+        //setTimeout will run this commands after 5 secons
+        setTimeout(()=>{
+
+        if (flag) { //of flage is true by defaoult.
+            resolve();
+        }else{
+            reject();
+        }
+        },5000);
+    });
+
+    console.log("first line after creating promise");
+    console.log("second line after creating promise");
+    console.log("third line after creating promise");
+    console.log("fourth line after creating promise");
+
+    //we can also ask from promise that the work is done or not.
+          
+    //this call back function {obj.then(())} run when promise get resolve.
+    //.catch(()=>) will reun if promise is rejected.
+    prom.then(()=>{
+         console.log("promise is resolve");
+    }).catch(() => {
+            console.log("promise is rejected");
+    });
+
+
+    ///9.Classes
+      //Template for creating Object.
+    class Tum{
+        
+        constructor(firstName,lastName,City){
+            this.firstName=firstName
+            this.lastName=lastName
+            this.city=City
+            console.log("object created");
+
+        }
+
+        display(){
+            console.log(`${this.firstName} : ${this.lastName} live in city ${this.city}`);
+        }
+
+    }
+
+    // giving value to object
+    let T1 = new Tum("Ram", "kumar", "Mumbai");
+    let T2 = new Tum("vijay", "singh", "New Dlehi" )
+    // console.log(T1);
+    T1.display();
+    T2.display();
+
+
+
+
+
+    </script>
+</body>
+</html>
